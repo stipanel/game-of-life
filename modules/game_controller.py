@@ -42,4 +42,4 @@ class GameController:
         Displays the current state of the universe.
         """
         for row in self.universe.grid:
-            print(' '.join(str(cell.is_alive()) for cell in row))
+            print(' '.join('1' if cell.is_alive() else '0' for cell in row))
