@@ -6,7 +6,7 @@ E-Mail: stipanel@hs-albsig.de
 Erstelldatum: 26.05.2024
 """
 
-from modules.game_controller import GameController
+from feature.game_controller import GameController
 
 def main():
     # Initialize the game controller with the configuration file
