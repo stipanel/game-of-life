@@ -5,7 +5,7 @@ import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import pytest
-from modules.game_controller import GameController
+from feature.game_controller import GameController
 
 def test_game_controller_initialization():
     controller = GameController(3, 3, "23/3")
