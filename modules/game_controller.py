@@ -1,3 +1,11 @@
+# modules/game_controller.py
+
+"""
+Name: Elias
+E-Mail: stipanel@hs-albsig.de
+Erstelldatum: 24.05.2024
+"""
+
 import configparser
 import time
 from modules.universe import Universe
@@ -43,11 +51,15 @@ class GameController:
                 if random.random() < self.init_alive_prob:
                     self.universe.set_cell_state(row, col, 1)
 
-    def run(self):
+    def run(self, steps=None):
         """
-        Runs the simulation for the configured number of iterations.
+        Runs the simulation for a given number of steps.
+
+        Args:
+            steps (int): The number of steps to run the simulation.
         """
-        for _ in range(self.iterations):
+        steps = steps if steps is not None else self.iterations
+        for _ in range(steps):
             self.display()
             self.universe.step()
             time.sleep(self.delay)
